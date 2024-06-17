@@ -12,27 +12,76 @@
         <div class="banner">
             <div class="odin-container">
                 <img src="images/odin-lined.png" class="odin-image"/>
+                <div class="odin-text-container">
+                    <p class="odin-text">ODIN</p>
+                </div>
             </div>
             <div class="citation-container">
-                <cite>Photo by Halie West on Unsplash</cite>
+                <cite>Photo by 
+                    <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on 
+                    <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">
+                        Unsplash
+                    </a>
+                </cite>
             </div>
         </div>
-        <div class="content">
-            <p class="description">
-                This is not a real online service! You know you need something like this in
-                your life to help you realize your deepest dreams.<br>Sign up now to get started 
-            </p>
-            <p class="call-to-action">
-                You <em>know</em> you want to.
-            </p>
+        <div class="content-container">
+            <div class="content">
+                <p class="description">
+                    This is not a real online service! You know you need something <br>like this in
+                    your life to help you realize your deepest dreams.<br   >Sign up <em>now</em> to get started 
+                </p>
+                <p class="call-to-action">
+                    You <em>know</em> you want to.
+                </p>
 
-            <form class=signup-form method="post" action="example-backend.com">
-                <fieldset class="personal-information">
-                    
-                </fieldset>
-                <button class=submit-button type="submit">Create Account</button>
-                <p>Already have an account? <a src="example-login-page.com">Log in</a></p>
-            </form>
+                <form class=signup-form method="post">
+                    <fieldset class="personal-information">
+                        <legend>Let's do this!</legend>
+                        <div class="personal-information-container">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <label class="form-label" for="first-name">FIRST NAME</label>
+                                        <input type="text" id="first-name" name="first-name">
+                                    </li>
+                                    <li>
+                                        <label class="form-label" for="email">EMAIL</label>
+                                        <input type="email" id="email" name="email">
+                                    </li>
+                                    <li>
+                                        <label class="form-label" for="password">PASSWORD</label>
+                                        <input type="password" id="password" name="password"
+                                            pattern="^(?=.*[A-Za-z0-9])(?=.*[^A-Za-z0-9]).{8,}$">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <label class="form-label" for="last-name">LAST NAME</label>
+                                        <input type="text" id="last-name" name="last-name">
+                                    </li>
+                                    <li>
+                                        <label class="form-label" for="phone-number">PHONE NUMBER</label>
+                                        <input type="tel" id="phone-number" name="phone-number">
+                                    </li>
+                                    <li>
+                                        <label class="form-label" for="confirm-password">CONFIRM PASSWORD</label>
+                                        <input type="password" id="confirm-password" name="confirm-password" 
+                                            pattern="^(?=.*[A-Za-z0-9])(?=.*[^A-Za-z0-9]).{8,}$">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button class=submit-button type="submit">Create Account</button>
+                    <p class="already-have-account-message">Already have an account? <a href="example-login-page.com">Log in</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="spacer">
+
         </div>
     </div>
 </body>

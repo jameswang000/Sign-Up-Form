@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /*
 1. Use a more-intuitive box-sizing model.
 */
@@ -45,36 +55,183 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
+/*END RESET*/
+html, body {
+    min-width: 800px;
+    width : 100vw;
+    height : 100vh;
+}
+
+body { 
+    border-top: 20px solid lightgray;
+    border-bottom: 20px solid lightgray;
+}
+
 .page {
     display: flex;
     width : 100%;
     height: 100%;
+    justify-items: flex-start;
 }
 
 .banner {
+    flex : 0.8;
     position : relative;
     background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .odin-container {
-    height: 12.5%;  
+    height: 15%;  
     position : relative;
     top : 30%;
     display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .odin-image {
     height: 100%;
     position : relative;
-    
+}
 
+.odin-text-container {
+    display: flex;
+    align-items: center;
+}
+.odin-text {
+    color: white;
+    font-family: "norsebold";
+    font-size: 50px;
+}
+
+.citation-container {
+    display: flex;
+    justify-content: center;
 }
 
 cite {
     color : white;
+    text-justify: center;
+    font-size: 8px;
+    font-style: normal;
 }
+
+.content-container {
+    flex : 2.2;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F9FAFB;
+}
+
+.signup-form {
+    background-color: white;
+}
+
+a {
+    color : white;
+}
+
+legend, .description, .call-to-action {
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-left : 20px
+}
+
+.call-to-action {
+    margin-bottom: 40px;
+}
+
+legend {
+    margin-left : 0px;
+}
+
+.personal-information {
+    border-width: 0px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    background-color: white;
+}
+
+
+.personal-information-container {
+    display : flex;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+label.form-label {
+    display : block;
+    text-align: left;
+    color : black;
+    font-size: 0.7em;
+}
+
+input {
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 25px;
+    width: 200px;
+    border : 1px solid #E5E7EB;
+    padding : 3px;
+}
+
+input:focus {
+    border : 1px solid blue;
+    outline : none;
+}
+
+.personal-information-container > div + div{
+    margin-left : 50px;
+}
+
+ul > li + li > label {
+    margin-top : 10px;
+}
+
+.submit-button {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 35px;
+    background-color: #596D48;
+    border-radius : 5px;
+    color : white;
+}
+
+.already-have-account-message {
+    margin-left: 20px;
+    color : black;
+    font-size: 10px;
+}
+
+.already-have-account-message > a {
+    color : #596D48;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.spacer {
+    background-color: gray;
+    height : 100%;
+    flex: 1.5;
+}
+
+input[type="password"]:invalid {
+    border : 1px solid red;
+    outline : none;
+}
+
 
 
 
